@@ -1,17 +1,19 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import Counter from '@/components/Counter'
+import CounterPanel from '@/contexts/CounterPanel'
+//import Counter from '@/components/Counter'
+
 import styles from '@/styles/Home.module.css'
 
 const IndexPage: NextPage = () => {
 	return (
-		<div className={styles.container}>
+		<div>
 			<Head>
 				<title>Redux Toolkit</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Counter />
+			<CounterPanel />
 		</div>
 	)
 }

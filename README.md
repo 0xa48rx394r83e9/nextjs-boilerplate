@@ -4,7 +4,7 @@
 
 ## Features
  - [x] styled-components
- - [x] Redux
+ - [x] Redux toolkit
  - [x] Next js
  - [x] eslint
  - [ ] Storybook js
@@ -12,8 +12,10 @@
  - [ ] husky
  - [ ] prettier
  - [ ] redis
- - [ ] mysql
+ - [ ] postgres
  - [ ] tailwind
  - [ ] twin
  - [ ] bcrypt
+ - [ ] prisma
+ - [ ] apollo
  - [ ] docker

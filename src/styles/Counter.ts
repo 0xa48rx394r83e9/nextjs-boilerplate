@@ -1,13 +1,21 @@
 import styled from 'styled-components'
 
-export const CounterContainer = styled.div`
+export const CounterContainerHorizontal = styled.div`
     display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+`
+
+export const CounterContainerVertical = styled.div`
+    display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
 `
 
 export const CounterValue = styled.span`
-    font-size: 78px;
+    font-size: 256px;
     padding-left: 16px;
     padding-right: 16px;
     margin-top: 2px;
