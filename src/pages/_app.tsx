@@ -1,14 +1,23 @@
 import '@/styles/globals.css'
 
-import { Provider } from 'react-redux'
 import type { AppProps } from 'next/app'
+import { SessionProvider } from 'next-auth/react';
+import { Provider } from 'react-redux'
 
+import { useApollo } from '@/services/graphql/apolloClient';
+import { ApolloProvider } from '@apollo/client';
 import store from '@/redux/store'
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps: { session, ...pageProps } }: AppProps): JSX.Element {
+    const apolloClient = useApollo({}, '');
+
 	return (
-		<Provider store={store}>
-			<Component {...pageProps} />
-		</Provider>
+        <SessionProvider session={session}>
+            <ApolloProvider client={apolloClient}>
+    		    <Provider store={store}>
+    			    <Component {...pageProps} />
+    		    </Provider>
+            </ApolloProvider>
+        </SessionProvider>
 	)
 }
