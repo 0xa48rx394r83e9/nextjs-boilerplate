@@ -16,9 +16,9 @@
  - [ ] tailwind
  - [ ] twin
  - [ ] bcrypt
- - [ ] next-auth
+ - [x] next-auth
  - [ ] prisma
- - [ ] apollo
+ - [x] apollo
  - [ ] docker
 
 ## File Structure
